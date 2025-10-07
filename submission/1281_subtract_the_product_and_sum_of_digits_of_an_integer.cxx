@@ -20,14 +20,20 @@
  *
  *
  */
- 
- #include <iostream>
- #include <set>
- #include <string>
- #include <vector>
- #include <map>
- #include <numeric>
- #include <algorithm>
- 
- int main(int argc, char** argv) { return 0; }
-    
+
+#include <iostream>
+#include <set>
+#include <string>
+#include <vector>
+#include <map>
+#include <numeric>
+#include <algorithm>
+
+int subtractProductAndSum(int n, int pro = 1, int sum = 0) {
+    return n == 0 ? pro - sum : subtractProductAndSum(n / 10, pro * (n % 10), sum + (n % 10));
+}
+
+int main(int argc, char** argv) {
+    std::cout << subtractProductAndSum(8) << std::endl;
+    return 0;
+}

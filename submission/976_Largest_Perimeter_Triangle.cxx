@@ -20,14 +20,24 @@
  *
  *
  */
- 
- #include <iostream>
- #include <set>
- #include <string>
- #include <vector>
- #include <map>
- #include <numeric>
- #include <algorithm>
- 
- int main(int argc, char** argv) { return 0; }
-    
+
+#include <iostream>
+#include <set>
+#include <string>
+#include <vector>
+#include <map>
+#include <numeric>
+#include <algorithm>
+
+int largestPerimeter(std::vector<int>& nums) {
+    std::sort(nums.rbegin(), nums.rend());
+    for (int i = 0, size = nums.size() - 2; i < size; i++) {
+        if (nums[i] < (nums[i + 1] + nums[i + 2])) return nums[i] + nums[i + 1] + nums[i + 2];
+    }
+    return 0;
+}
+
+int main(int argc, char** argv) {
+    std::cout << largestPerimeter(std::vector<int>{1, 2, 3}) << std::endl;
+    return 0;
+}
