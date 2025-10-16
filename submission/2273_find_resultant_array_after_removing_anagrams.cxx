@@ -43,4 +43,8 @@ std::vector<std::string> removeAnagrams(std::vector<std::string>& words) {
     return solution;
 }
 
-int main(int argc, char** argv) { return 0; }
+int main(int argc, char** argv) {
+    std::vector<std::string> words = {"a", "b", "c"};
+    std::vector<std::string> solution = removeAnagrams(words);
+    return 0;
+}
