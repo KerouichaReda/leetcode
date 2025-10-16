@@ -49,6 +49,7 @@ int maxIncreasingSubarrays(std::vector<int>& nums) {
 
     return solution;
 }
-int main(int argc, char** argv) { 
-    std::cout << maxIncreasingSubarrays{1,2,3,4} << std::endl;
-    return 0; }
+int main(int argc, char** argv) {
+    std::cout << maxIncreasingSubarrays{1, 2, 3, 4} << std::endl;
+    return 0;
+}
